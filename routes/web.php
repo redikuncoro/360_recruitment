@@ -12,6 +12,12 @@
 */
 Route::get('/', 'DashboardController@homePage');
 
+Route::get('/login', 'UserController@viewLogin');
+Route::post('/login', 'UserController@login');
+
+Route::get('/register', 'UserController@viewRegister');
+Route::post('/register', 'UserController@register');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });

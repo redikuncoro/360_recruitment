@@ -11,7 +11,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
  * Class User
- * 
+ *
  * @property int $id
  * @property string $name
  * @property string $email
@@ -20,7 +20,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $remember_token
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * 
+ *
  * @property \Illuminate\Database\Eloquent\Collection $transactions
  *
  * @package App\Models
@@ -37,7 +37,7 @@ class User extends Eloquent
 	];
 
 	protected $fillable = [
-		'name',
+		'username',
 		'email',
 		'email_verified_at',
 		'password',
