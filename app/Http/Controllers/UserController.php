@@ -9,8 +9,11 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function viewLogin()
+    public function viewLogin(Request $request)
     {
+      if ($request->session()->has('user')) {
+        return redirect('/');
+      }
       return view('pages.login');
     }
     public function login(Request $request)
@@ -36,6 +39,11 @@ class UserController extends Controller
         dd("wrong password");
         return back()->withErrors(['message' => "wrong password"]);
       }
+    }
+
+    public function logout(Request $request){
+      $request->session()->forget('user');
+      return redirect('/login')->with('success', 'Logout success');
     }
 
     public function viewRegister()

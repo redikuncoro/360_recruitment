@@ -18,7 +18,7 @@ class CreateCarsTable extends Migration
             $table->string('name');
             $table->bigInteger('price')->nullable()->devault(0);
             $table->bigInteger('stock')->nullable()->devault(0);
-            $table->integer('status');
+            $table->integer('status')->devault(0);
             $table->timestamps();
         });
     }
