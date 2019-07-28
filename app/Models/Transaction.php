@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Sat, 27 Jul 2019 04:51:26 +0000.
+ * Date: Sun, 28 Jul 2019 17:10:06 +0000.
  */
 
 namespace App\Models;
@@ -20,6 +20,8 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $status
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property int $quantity
+ * @property int $value
  * 
  * @property \App\Models\Car $car
  * @property \App\Models\User $user
@@ -33,7 +35,9 @@ class Transaction extends Eloquent
 	protected $casts = [
 		'id_car' => 'int',
 		'id_user' => 'int',
-		'status' => 'int'
+		'status' => 'int',
+		'quantity' => 'int',
+		'value' => 'int'
 	];
 
 	protected $fillable = [
@@ -41,7 +45,9 @@ class Transaction extends Eloquent
 		'id_user',
 		'name',
 		'email',
-		'status'
+		'status',
+		'quantity',
+		'value'
 	];
 
 	public function car()

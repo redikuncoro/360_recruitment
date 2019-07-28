@@ -24,11 +24,11 @@
       <form class="" action="/login" method="post">
         {{ csrf_field() }}
         <div class="form-group">
-          <label for="exampleInputEmail1">Username</label>
+          <label>Username</label>
           <input type="text" class="form-control" placeholder="Username" name="username" required>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+          <label>Password</label>
           <input type="password" class="form-control" placeholder="Password" name="password" required>
         </div>
         <div class="form-group">

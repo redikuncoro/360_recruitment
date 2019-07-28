@@ -35,6 +35,9 @@
       left: 50%;
       transform: translate(-50%,-50%);
     }
+    .mb-md{
+      margin-bottom: 12px;
+    }
   </style>
   @yield('head')
 </head>
